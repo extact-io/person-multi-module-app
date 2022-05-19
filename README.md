@@ -5,7 +5,7 @@
 
 |記事| 利用内容 |
 |---|---|
-|[ArchUnitで考えるアーキテクチャ構造とその検証](xxxx)| ArchUnitのサンプル|
+|[ArchUnitで考えるアーキテクチャ構造とその検証](https://developer.mamezou-tech.com/blogs/2022/05/19/archunit-and-architechure/)| ArchUnitのサンプル|
 
 ## ArchUnitのサンプルテストクラス
 ||クラス|実装内容|
