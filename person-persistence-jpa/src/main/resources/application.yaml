@@ -1,0 +1,7 @@
+javax.sql.DataSource:
+  sampleDataSource:
+    dataSourceClassName: org.h2.jdbcx.JdbcDataSource
+    dataSource:
+      url: jdbc:h2:mem:sample;INIT=RUNSCRIPT FROM 'classpath:init-rms.ddl'
+      user: sa
+      password:
