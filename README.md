@@ -6,6 +6,7 @@
 |記事| 利用内容 |
 |---|---|
 |[ArchUnitで考えるアーキテクチャ構造とその検証](https://developer.mamezou-tech.com/blogs/2022/05/19/archunit-and-architechure/)| ArchUnitのサンプル|
+|[JUnit5のExtension実装 - テストライフサイクルコールバックと引数の解決](https://developer.mamezou-tech.com/blogs/2022/05/29/junit5-extension/)| JUnit5のExtension実装サンプル|
 
 ## ArchUnitのサンプルテストクラス
 ||クラス|実装内容|
@@ -17,6 +18,14 @@
 ||[ServiceDependencyArchUnitTest](/person-service/src/test/java/io/extact/sample/service/ServiceDependencyArchUnitTest.java)|serviceパッケージで依存してOKなライブラリの定義<br>persistenceパッケージ直下で依存してOKなライブラリの定義<br>persistenceの実装パッケージへの依存がないことの定義|
 ||[JpaDependencyArchUnitTest](/person-persistence-jpa/src/test/java/io/extact/sample/person/persistence/jpa/JpaDependencyArchUnitTest.java)|jpaパッケージで依存してOKなライブラリの定義|
 ||[FileDependencyArchUnitTest](/person-persistence-file/src/test/java/io/extact/sample/person/persistence/file/FileDependencyArchUnitTest.java)|fileパッケージで依存してOKなライブラリの定義|
+
+## JUnit5のExtension実装サンプルクラス
+|クラス|実装内容|
+|---|---|
+|[JpaPersonRepository](/person-persistence-jpa/src/main/java/io/extact/sample/person/persistence/jpa/JpaPersonRepository.java) | テスト対象クラス|
+|[JpaPersonRepositoryTest](/person-persistence-jpa/src/test/java/io/extact/sample/person/persistence/jpa/JpaPersonRepositoryTest.java) | Extensionを使ったテストクラス|
+|[JpaTransactionalExtension](/person-persistence-jpa/src/test/java/io/extact/sample/person/persistence/jpa/junit5/JpaTransactionalExtension.java) | Extension実装|
+|[TransactionalForTest](/person-persistence-jpa/src/test/java/io/extact/sample/person/persistence/jpa/junit5/TransactionalForTest.java) | トランザクション対象を表すアノテーション|
 
 
 ## ビルドと実行

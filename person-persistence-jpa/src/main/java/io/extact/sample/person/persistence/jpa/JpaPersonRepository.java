@@ -12,6 +12,13 @@ import io.extact.sample.person.persistence.PersonRepository;
 @ApplicationScoped
 public class JpaPersonRepository implements PersonRepository {
 
+    public JpaPersonRepository() {
+        // NOP
+    }
+    public JpaPersonRepository(EntityManager em) {
+        this.em = em;
+    }
+
     @PersistenceContext
     private EntityManager em;
 
@@ -28,6 +35,7 @@ public class JpaPersonRepository implements PersonRepository {
     @Override
     public Person add(Person person) {
         em.persist(person);
+        em.flush();
         return person;
     }
 }

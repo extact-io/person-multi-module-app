@@ -1,0 +1,13 @@
+# DB Conneciton for Unit Test
+test.db.connection:
+  unitname: sample
+  properties:
+    javax.persistence.transactionType: RESOURCE_LOCAL
+    javax.persistence.jdbc.driver: org.h2.jdbcx.JdbcDataSource
+    javax.persistence.jdbc.url: jdbc:h2:mem:rms;INIT=RUNSCRIPT FROM 'classpath:init-rms.ddl'
+    javax.persistence.jdbc.user: sa
+    javax.persistence.jdbc.password:
+    eclipselink.target-server: None
+    eclipselink.logging.level.sql: FINE
+    eclipselink.logging.parameters: true
+
